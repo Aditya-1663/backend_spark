@@ -1,6 +1,7 @@
 const mongoose=require("mongoose")
 
-const mongouri="mongodb://0.0.0.0:27017/sparkBank2" 
+// const mongouri="mongodb://0.0.0.0:27017/sparkBank2" 
+const mongouri="mongodb+srv://Aditya:Aditya@sparkbank.xxynyrm.mongodb.net/?retryWrites=true&w=majority&appName=Sparkbank" 
 // const mongouri="mongodb+srv://adityakumar:aditya@cluster0.wckodqw.mongodb.net/?retryWrites=true&w=majority"
  
 
@@ -14,7 +15,7 @@ const connectTomongo=async ()=>{
 }
   catch(err){ 
 
-      console.log("fjdfh")
+      console.log(err)
     }
 }
 module.exports=connectTomongo;

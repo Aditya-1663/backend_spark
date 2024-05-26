@@ -1,3 +1,4 @@
+
 const express = require("express");
 const { body, validationResult } = require("express-validator");
 const router = express.Router();
@@ -5,11 +6,9 @@ const User = require("../schema/customerschema");
 const Transfer = require("../schema/Transfersh");
 const TransferHistory = require("../schema/TransferHistory");
 
- 
- 
-var bcrypt = require('bcryptjs');
-var jwt = require('jsonwebtoken');
-const { type } = require("@testing-library/user-event/dist/type");
+
+
+
 
 //adding user 
 router.post(
@@ -115,14 +114,14 @@ router.get("/transferHistory", async (req, res) => {
         console.log(error);
     }
 });
-router.get("https://s3.amazonaws.com/roxiler.com/product_transaction.json", async (req, res) => {
-    try {
-        const his = await TransferHistory.find();
-        res.json(his);
-    } catch (error) {
-        console.log(error);
-    }
-});
+// router.get("https://s3.amazonaws.com/roxiler.com/product_transaction.json", async (req, res) => {
+//     try {
+//         const his = await TransferHistory.find();
+//         res.json(his);
+//     } catch (error) {
+//         console.log(error);
+//     }
+// });
 
 
 
